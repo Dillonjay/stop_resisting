@@ -1,0 +1,19 @@
+{
+  "name": "stop_resisting",
+  "version": "1.0.0",
+  "description": "Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dillonjay/stop_resisting.git"
+  },
+  "author": "Dillon Lundell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dillonjay/stop_resisting/issues"
+  },
+  "homepage": "https://github.com/Dillonjay/stop_resisting#readme"
+}
