@@ -1,2 +1,4 @@
-# stop_resisting
-A fun game
+# Webpack / React
+
+We install webpack locally so that we can manage Webpack’s version per project.
+
