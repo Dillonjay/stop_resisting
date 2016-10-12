@@ -4,7 +4,8 @@
   "description": "Tutorial for setting up React with Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
