@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Dillonjay/stop_resisting/issues"
   },
-  "homepage": "https://github.com/Dillonjay/stop_resisting#readme"
+  "homepage": "https://github.com/Dillonjay/stop_resisting#readme",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  }
 }
