@@ -1,21 +1,18 @@
 {
-  "name": "stop_resisting",
+  "name": "webpack_react_boilerplate_tutorial",
   "version": "1.0.0",
-  "description": "Game",
+  "description": "Tutorial for setting up React with Webpack",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Dillonjay/stop_resisting.git"
+    "url": "git+https://github.com/Dillonjay/webpack_react_boilerplate_tutorial.git"
   },
   "author": "Dillon Lundell",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Dillonjay/stop_resisting/issues"
-  },
-  "homepage": "https://github.com/Dillonjay/stop_resisting#readme",
+  "homepage": "https://github.com/Dillonjay/webpack_react_boilerplate_tutorial#readme",
   "devDependencies": {
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
