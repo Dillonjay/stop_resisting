@@ -33,8 +33,13 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				include: PATHS.app,
-				loaders: ['style-loader','css-loader']
+				loaders: ['style-loader','css-loader'],
+				include: PATHS.app
+			},
+			{
+				test: /.*\.(png|jpe?g)$/i,
+				loader: 'file-loader',
+				include: PATHS.app
 			}
 		]
 	},
