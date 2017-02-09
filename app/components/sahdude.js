@@ -11,7 +11,7 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<div className="main">
-				<ul>
+			  <ul>
 					{
 						this.state.names.map(function(name,i){
 							return <li key={i}>{ name }... Sah Dude!!</li>
@@ -19,26 +19,26 @@ export default class App extends React.Component {
 					}
 				</ul>
 				<form onSubmit={this.addFriend.bind(this)}>
-          <input type="text" value={this.state.name} onChange={this.handleChange.bind(this)} />
-          <button type="submit">Add A friend!</button>
-          <button onClick={this.delete.bind(this)}>Remove!</button>
+           <input type="text" value={this.state.name} onChange={this.handleChange.bind(this)} />
+           <button type="submit">Add A friend!</button>
+           <button onClick={this.delete.bind(this)}>Remove!</button>
         </form>
 			</div>
 		)
 	}
 	handleChange(event) {
-    	this.setState({name: event.target.value});
-  	}
-  	delete(e) {
-  		let names = this.state.names;
-  		names.pop();
-  		this.setState({ names });
-  		e.preventDefault();
-  	}
+    this.setState({name: event.target.value});
+  }
+  delete(e) {
+  	let names = this.state.names;
+  	names.pop();
+  	this.setState({ names });
+  	e.preventDefault();
+  }
 	addFriend(e){
-  		let names = this.state.names;
-   		names.push(this.state.name);
-  		this.setState({ names, name:'' });
-  		e.preventDefault();
+  	let names = this.state.names;
+   	names.push(this.state.name);
+  	this.setState({ names, name:'' });
+  	e.preventDefault();
 	}
 }
