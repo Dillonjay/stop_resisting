@@ -1,16 +1,17 @@
 const merge = require('webpack-merge');
 // Require the node module path so we can give absolute paths to webpack. 
 const path = require('path');
-// Create a PATHS variabele to store our absolute paths. 
+// Create a PATHS variabele to store our absolute paths.
+
+const HtmlWebpackTemplate = require('html-webpack-template');
+const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 const PATHS = {
-	// Join paths with path.join()
-	// The entry path will be the app folder.  
-	app : path.join(__dirname,'app'),
+	app : path.join(__dirname, 'app'),
 	// The output path will be the build folder.
-	build : path.join(__dirname,'build')
+	build : path.join(__dirname, 'build')
 };
 // Export the configurations so that webpack will know what do do when called. 
-const comomn = {
+module.exports = {
 	// Entry accepts a path or an object of entries. We'll use the
 	// object of entries because it's convenient with more complex configurations.
 	entry: {
@@ -22,12 +23,23 @@ const comomn = {
 		// spit out the final build result iside of the build folder and call it bundle.js
 		path : PATHS.build,
 		filename : 'bundle.js'
-	}
-}
-// Default configuration
-if(TARGET === 'start' || !TARGET) {
-	module.exports = merge(common, {});
-}
-if(TARGET === 'build') {
-	module.exports = merge(common, {});
+	},
+	module : {
+		loaders : [
+			{
+				test : /\.jsx?$/,
+				loader : 'babel-loader',
+				include: PATHS.app
+			}
+		]
+	},
+	plugins : [
+		new HtmlWebpackPlugin({
+        template: HtmlWebpackTemplate,
+        title: 'Uh Oh',
+        appMountId: 'app',
+        mobile: true, 
+        inject: false, 
+      })
+	]
 }
