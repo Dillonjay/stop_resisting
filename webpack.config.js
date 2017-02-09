@@ -27,9 +27,14 @@ module.exports = {
 	module : {
 		loaders : [
 			{
-				test : /\.jsx?$/,
-				loader : 'babel-loader',
+				test: /\.jsx?$/,
+				loader: 'babel-loader',
 				include: PATHS.app
+			},
+			{
+				test: /\.css$/,
+				include: PATHS.app,
+				loaders: ['style-loader','css-loader']
 			}
 		]
 	},
