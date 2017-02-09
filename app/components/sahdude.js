@@ -19,10 +19,10 @@ export default class App extends React.Component {
 					}
 				</ul>
 				<form onSubmit={this.addFriend.bind(this)}>
-              		 <input type="text" value={this.state.name} onChange={this.handleChange.bind(this)} />
-              		<button type="submit">Add A friend!</button>
-              		<button onClick={this.delete.bind(this)}>Remove!</button>
-            	</form>
+          <input type="text" value={this.state.name} onChange={this.handleChange.bind(this)} />
+          <button type="submit">Add A friend!</button>
+          <button onClick={this.delete.bind(this)}>Remove!</button>
+        </form>
 			</div>
 		)
 	}
