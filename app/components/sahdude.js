@@ -1,4 +1,5 @@
 import React from 'react';
+import Dude from '../images/Dude.jpg'
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -11,18 +12,21 @@ export default class App extends React.Component {
 	render() {
 		return (
 			<div className="main">
-			  <ul>
-					{
-						this.state.names.map(function(name,i){
-							return <li key={i}>{ name }... Sah Dude!!</li>
-						})
-					}
-				</ul>
 				<form onSubmit={this.addFriend.bind(this)}>
-           <input type="text" value={this.state.name} onChange={this.handleChange.bind(this)} />
+           <input type="text" value={this.state.name} onChange={this.handleChange.bind(this)} placeholder="add a friend" />
            <button type="submit">Add A friend!</button>
            <button onClick={this.delete.bind(this)}>Remove!</button>
         </form>
+			  <ul>
+					{
+						this.state.names.map(function(name,i){
+							return <div key={ i }>
+								<h3>{ name }... Sah Dude!!</h3>
+								<img className="dude" src={ Dude } />
+								</div>
+						})
+					}
+				</ul>
 			</div>
 		)
 	}
