@@ -61,12 +61,12 @@ module.exports = {
 		// We are telling webpack to create a new html document and add our bundle as a script tag.
 		// (css as an link tag)
 		new HtmlWebpackPlugin({
-		// This is the template we want to use. You can have also create your own ejs template if you desire. 
-        template: HtmlWebpackTemplate,
-        title: 'Uh Oh',
-        appMountId: 'app',
-        mobile: true, 
-        inject: false, 
-      })
+			// This is the template we want to use. You can have also create your own ejs template if you desire. 
+        	template: HtmlWebpackTemplate,
+        	title: 'Uh Oh',
+        	appMountId: 'app',
+        	mobile: true, 
+        	inject: false, 
+      	})
     ]
 }
